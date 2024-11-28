@@ -1,0 +1,160 @@
+/* Reset default styling */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+    background-image: url('OIP.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden; /* Loại bỏ cuộn ngang */
+}
+
+/* Container chứa logo và social links */
+.logo-social-wrapper {
+    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: flex-start; /* Đẩy toàn bộ nội dung sang trái */
+    width: 100%; /* Đảm bảo chiếm hết chiều ngang */
+    padding: 10px 20px; /* Tạo khoảng cách xung quanh */
+    gap: 20px; /* Thêm khoảng cách giữa logo và các biểu tượng */
+}
+
+/* Logo */
+.logo {
+    font-size: 40px; /* Giảm kích thước logo */
+    font-weight: bold;
+    color: #000;
+    text-align: left; /* Căn lề trái cho logo */
+    margin: 0; /* Loại bỏ margin không cần thiết */
+}
+
+/* Social links */
+.social-links {
+    display: flex; /* Sử dụng flexbox */
+    gap: 15px; /* Giảm khoảng cách giữa các biểu tượng */
+    margin-left: 20px; /* Tạo khoảng cách để đẩy vào gần logo */
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: right; /* Căn giữa icon */
+    width: 50px; /* Giảm kích thước biểu tượng */
+    height: 50px;
+    color: #555;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    border: 2px solid #ccc; /* Giảm viền */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Header tổng quát */
+header {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px; /* Tạo khoảng cách với phần dưới */
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex; /* Sử dụng flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 50px; /* Chiều cao của menu bao phủ toàn bộ chiều cao khung */
+    margin: 0; /* Loại bỏ khoảng cách mặc định */
+    padding: 0; /* Loại bỏ padding mặc định */
+    list-style: none; /* Loại bỏ dấu chấm hoặc số */
+}
+
+nav ul li {
+    margin: 0 7px; /* Khoảng cách ngang giữa các mục */
+}
+
+nav ul li a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: #333; /* Màu chữ */
+    font-size: 20px; /* Kích thước font chữ */
+    font-weight: bold; /* Đậm chữ */
+    font-style: italic; /* In nghiêng */
+    transition: color 0.3s; /* Hiệu ứng đổi màu */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Đổi màu khi hover */
+}
+
+/* Banner styling */
+.banner {
+    font: italic;
+    text-align: center;
+    padding: 50px 20px;
+    background: #eee;
+    color: #333;
+    font-size: 28px; /* Tăng kích thước font cho nổi bật */
+}
+
+.banner p {
+    font-style: italic;
+    margin: 10px 0;
+    font-size:20px; /* Điều chỉnh font-size của văn bản */
+}
+
+/* Product grid */
+.product-grid {
+    display: grid; /* Sử dụng grid cho các sản phẩm */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Tăng khoảng cách giữa các sản phẩm */
+    padding: 40px 20px;
+}
+
+/* Product card */
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng shadow */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 20px; /* Tăng kích thước chữ cho tên sản phẩm */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #888;
+}
