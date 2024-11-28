@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duok's Watches</title>
+    <title>Duok's Watches | Timeless Elegance and Quality Watches</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
     <style>
@@ -81,23 +81,31 @@
             <div class="logo-social-wrapper">
                 <div class="logo">Duok's Watches</div>
                 <div class="social-links">
+                    <!-- Tooltip with phone icon -->
                     <div class="tooltip">
-                        <a href="#" onclick="copyPhoneNumber(event)">
+                        <label for="contactPopup">
                             <img src="phone.png" alt="Phone" class="icon">
-                        </a>
+                        </label>
+                        <span class="tooltip-text">Click to view contact</span>
                     </div>
-                    <div id="contactPopup" class="popup">
-    <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <h2>Contact Information</h2>
-        <p><strong>Phone:</strong> +84337601775</p>
-        <p>
-            <strong>Zalo:</strong> 
-            <a href="https://zalo.me/84337601775" target="_blank">Chat on Zalo</a>
-        </p>
-    </div>
-</div>
+                    
+                    <!-- Popup container -->
+                    <input type="checkbox" id="contactPopup" class="popup-toggle">
+                    <div class="popup">
+                        <div class="popup-content">
+                            <label for="contactPopup" class="close-btn">×</label>
+                            <h2>Contact Information</h2>
+                            <p><strong>Phone:</strong> +84337601775</p>
+                            <div class="contact-links">
+                                <span><strong>Chat on:</strong></span>
+                                <a href="https://zalo.me/84337601775" target="_blank">Zalo</a>
+                            </div>
+                        </div>
+                    </div>
+                    
 
+
+                    
                     <a href="https://www.facebook.com/profile.php?id=100015753883619" target="_blank">
                         <img src="social-media.png" alt="Facebook" class="icon">
                     </a>
@@ -108,11 +116,11 @@
             </div>
         </div>
         
-        <div class="banner">
-            <p1>Men's Watches</p1>
-            <p>Duok's Watch is the perfect place to find stylish, high-quality watches at affordable prices, offering the ideal choice for those who appreciate elegance and sophistication.</p>
-        </div>
-        <nav>
+        <section class="product-intro">
+            <h2 class="title">About Duok:</h2>
+            <p class="description">Duok's Watch is the perfect place to find stylish, high-quality watches at affordable prices, offering the ideal choice for those who appreciate elegance and sophistication.</p>
+        </section>
+                <nav>
             <ul>
                 <li><a href="https://example.com/home" target="_blank">Home</a></li>
                 <li><a href="https://example.com/watches" target="_blank">Watches</a></li>

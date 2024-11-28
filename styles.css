@@ -35,35 +35,97 @@ body {
 .logo {
     font-size: 40px; /* Giảm kích thước logo */
     font-weight: bold;
-    color: #000;
+    color: #2C3E50; /* Màu xanh đậm cho logo */
     text-align: left; /* Căn lề trái cho logo */
     margin: 0; /* Loại bỏ margin không cần thiết */
 }
+/* Section containing the product intro */
+.product-intro {
+    background: linear-gradient(to right, #2980b9, #8e44ad); /* Gradient nền nhẹ nhàng từ xanh dương đến tím */
+    padding: 40px 20px; /* Tạo khoảng cách phía trên và dưới */
+    text-align: center; /* Căn giữa nội dung */
+    border-radius: 15px; /* Cắt góc cho khung */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Bóng mờ để tạo chiều sâu */
+    color: #fff; /* Màu chữ trắng để nổi bật trên nền gradient */
+    margin-bottom: 30px; /* Khoảng cách phía dưới */
+}
 
-/* Social links */
+/* Title with larger font and subtle animation */
+.product-intro .title {
+    font-size: 36px; /* Kích thước chữ lớn */
+    font-weight: bold; /* Chữ đậm */
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px; /* Khoảng cách giữa tiêu đề và nội dung */
+    color: #f39c12; /* Màu chữ vàng tươi để nổi bật */
+    text-transform: uppercase; /* Chữ in hoa để tạo sự mạnh mẽ */
+    letter-spacing: 2px; /* Khoảng cách chữ để dễ đọc hơn */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Bóng nhẹ cho chữ */
+}
+
+/* Description with lighter color */
+.product-intro .description {
+    font-size: 18px; /* Cỡ chữ vừa phải */
+    font-style: italic; /* Chữ in nghiêng để tạo sự mềm mại */
+    font-family: 'Georgia', serif;
+    max-width: 800px; /* Giới hạn độ rộng của đoạn văn */
+    margin: 0 auto; /* Căn giữa đoạn văn */
+    color: rgba(255, 255, 255, 0.85); /* Màu chữ trắng nhạt để dễ đọc */
+    line-height: 1.6; /* Giãn cách dòng để dễ đọc */
+    padding: 10px 20px;
+}
+
+/* Hover effect for the intro section */
+.product-intro:hover {
+    transform: translateY(-5px); /* Nâng phần giới thiệu lên một chút khi hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Bóng mờ mạnh hơn khi hover */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+}
+
+/* Các biểu tượng social links */
 .social-links {
-    display: flex; /* Sử dụng flexbox */
-    gap: 15px; /* Giảm khoảng cách giữa các biểu tượng */
-    margin-left: 20px; /* Tạo khoảng cách để đẩy vào gần logo */
+    display: flex;
+    justify-content: center; /* Căn giữa các biểu tượng */
+    gap: 20px; /* Khoảng cách giữa các biểu tượng */
+    align-items: center; /* Căn chỉnh theo chiều dọc */
 }
 
 .social-links a {
     display: flex;
     justify-content: center;
-    align-items: right; /* Căn giữa icon */
+    align-items: center; /* Căn giữa icon */
     width: 50px; /* Giảm kích thước biểu tượng */
     height: 50px;
     color: #555;
     font-size: 20px;
     padding: 8px;
     border-radius: 50%;
-    border: 2px solid #ccc; /* Giảm viền */
+    border: 1px solid #ccc; /* Màu viền xám nhạt */
     transition: background-color 0.3s, color 0.3s;
+    background-color: #ecf0f1; /* Màu nền biểu tượng */
 }
 
 .social-links a:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #3498db; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+}
+
+/* Biểu tượng được chỉnh lại */
+.social-links .icon {
+    width: 40px; /* Đặt kích thước cho biểu tượng */
+    height: 40px; /* Đặt kích thước cho biểu tượng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%; /* Cắt tròn các biểu tượng */
+    padding: 5px; /* Khoảng cách từ đường viền đến biểu tượng */
+    background-color: #fff; /* Màu nền trắng */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng cho biểu tượng */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.social-links .icon:hover {
+    transform: scale(1.1); /* Phóng to biểu tượng khi hover */
+    background-color: #f0f0f0; /* Thay đổi màu nền khi hover */
 }
 
 /* Header tổng quát */
@@ -72,6 +134,8 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     margin-bottom: 20px; /* Tạo khoảng cách với phần dưới */
+    padding: 20px 0;
+    color: #2C3E50; /* Màu chữ của header */
 }
 
 /* Navigation styling */
@@ -83,6 +147,7 @@ nav ul {
     margin: 0; /* Loại bỏ khoảng cách mặc định */
     padding: 0; /* Loại bỏ padding mặc định */
     list-style: none; /* Loại bỏ dấu chấm hoặc số */
+    background-color: #ecf0f1; /* Màu nền cho thanh điều hướng */
 }
 
 nav ul li {
@@ -107,53 +172,56 @@ nav ul li a:hover {
     font: italic;
     text-align: center;
     padding: 50px 20px;
-    background: #eee;
-    color: #333;
+    background: #f39c12; /* Màu nền cam cho banner */
+    color: #fff; /* Màu chữ trắng */
     font-size: 28px; /* Tăng kích thước font cho nổi bật */
 }
 
 .banner p {
     font-style: italic;
     margin: 10px 0;
-    font-size:20px; /* Điều chỉnh font-size của văn bản */
+    font-size: 20px; /* Điều chỉnh font-size của văn bản */
 }
 
 /* Product grid */
-.product-grid {
-    display: grid; /* Sử dụng grid cho các sản phẩm */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px; /* Tăng khoảng cách giữa các sản phẩm */
-    padding: 40px 20px;
-}
-
-
 /* Product card */
 .product-card {
-    background: #fff;
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff); /* Nền gradient mượt mà từ sáng tới trắng */
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Tăng độ bóng để sản phẩm nổi bật hơn */
     overflow: hidden;
     text-align: center;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng shadow */
+    border: 1px solid #ddd; /* Thêm viền cho card */
 }
 
+/* Product card hover effect */
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
 }
 
+/* Background behind product images */
 .product-card img {
     max-width: 100%;
     height: auto;
     margin-bottom: 15px;
+    border-radius: 5px; /* Cắt góc ảnh sản phẩm */
+    transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng khi hover ảnh */
 }
 
+.product-card img:hover {
+    transform: scale(1.05); /* Phóng to ảnh khi hover */
+}
+
+/* Đổi màu chữ và cải thiện giao diện */
 .product-card h3, .product-card h2 {
     font-size: 20px; /* Kích thước chữ cho tên sản phẩm */
     font-weight: bold; /* In đậm */
-    color: #000; /* Màu đen */
+    color: #2C3E50; /* Màu chữ xanh đậm */
     margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Thêm bóng cho chữ */
 }
 
 .product-card p {
@@ -167,55 +235,162 @@ nav ul li a:hover {
     font-size: 18px; /* Cỡ chữ vừa phải */
     font-style: italic; /* In nghiêng */
     font-weight: bold; /* In đậm */
-    color: #333; /* Màu chữ đậm nhẹ */
+    color: #e74c3c; /* Màu chữ đỏ cho giá tiền */
     margin-top: 10px; /* Khoảng cách phía trên giá tiền */
 }
 
-/* Popup Background */
+/* Thêm bóng mờ cho background bên ngoài của từng sản phẩm */
+.product-grid {
+    background: rgba(0, 0, 0, 0.05); /* Nền nhẹ cho phần grid của sản phẩm */
+    border-radius: 20px; /* Tạo bo tròn cho toàn bộ grid */
+    padding: 40px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng nhẹ cho background */
+}
+
+/* Điều chỉnh khoảng cách giữa các sản phẩm */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Điều chỉnh hover hiệu ứng cho các sản phẩm */
+.product-card:hover {
+    background: linear-gradient(to bottom, #ffffff, #f1f1f1); /* Thêm gradient nền khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Tăng bóng cho card khi hover */
+}
+
+/* Nếu muốn thêm ảnh nền cho toàn bộ phần sản phẩm */
+.product-grid {
+    background-image: url('background-image.jpg'); /* Thêm ảnh nền */
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* Popup container */
 .popup {
-    display: none; /* Ẩn popup mặc định */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
-    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Nền mờ đục */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
-/* Popup Content */
+/* Hiện popup khi checkbox được chọn */
+.popup-toggle:checked + .popup {
+    display: flex;
+    opacity: 1;
+}
+
+/* Popup content */
 .popup-content {
-    background: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
     text-align: center;
-    animation: slideDown 0.3s ease-out;
+    max-width: 500px;
+    max-height: 80%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease;
 }
 
-/* Close Button */
+/* Title and Text */
+.popup-content h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+.popup-toggle {
+    display: none;
+}
+
+
+/* Contact links (Zalo) */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-links a {
+    color: #0078ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Button close styles */
 .close-btn {
     position: absolute;
     top: 10px;
-    right: 15px;
-    font-size: 20px;
-    font-weight: bold;
+    right: 20px;
+    font-size: 30px;
     color: #333;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+/* Hover effect for close button */
+.close-btn:hover {
+    color: #ff6347; /* Màu đỏ khi di chuột */
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
     cursor: pointer;
 }
 
-/* Animation */
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Animation for popup appearance */
+@keyframes fadeIn {
+    0% {
         opacity: 0;
+        transform: scale(0.9);
     }
-    to {
-        transform: translateY(0);
+    100% {
         opacity: 1;
+        transform: scale(1);
     }
 }
