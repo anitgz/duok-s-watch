@@ -341,22 +341,178 @@ nav ul li a:hover {
     margin-left: 10px;
 }
 
-.close-btn {
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+  }
+  
+  .close-btn {
     position: absolute;
     top: 10px;
-    right: 20px;
-    font-size: 30px;
+    right: 15px;
+    font-size: 1.5rem;
     color: #333;
     cursor: pointer;
-    background-color: transparent;
+    background: transparent;
     border: none;
-    font-weight: bold;
-}
-
-.close-btn:hover {
+  }
+  
+  .close-btn:hover {
     color: #e74c3c;
+  }
+
+  /* Styling for modal images */
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Spacing between images */
+    margin-bottom: 20px;
+  }
+  
+  .modal-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .modal-images img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  .modal-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
+.main-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.thumbnail-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thumbnail-row input {
+    display: none;
+}
+
+.thumbnail-row label {
+    cursor: pointer;
+}
+
+.thumbnail-row img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.thumbnail-row img:hover {
+    transform: scale(1.1);
+    border-color: blue;
+}
+.thumbnail-row label {
+    cursor: pointer;
+}
+
+/* Make the corresponding image large when selected */
+input#product1-thumb1:checked ~ .modal-content .main-image img {
+    content: url('z6065221985034_dcb8d355e39538afbd3cfc2410781a37.jpg');
+}
+
+input#product1-thumb2:checked ~ .modal-content .main-image img {
+    content: url('z6065221998170_4ad25f24b37097ff1cbd5f8a36230442.jpg');
+}
+
+input#product1-thumb3:checked ~ .modal-content .main-image img {
+    content: url('z6065222005587_15237c7e22fc61576dff65014fa92cfe.jpg');
+}
+
+input#product1-thumb4:checked ~ .modal-content .main-image img {
+    content: url('z6065222017820_b13180ad95ed09b18f7b1c3a2b20846c.jpg');
+}
+
+input#product2-thumb1:checked ~ .modal-content .main-image img,
+input#product2-thumb2:checked ~ .modal-content .main-image img,
+input#product2-thumb3:checked ~ .modal-content .main-image img,
+input#product2-thumb4:checked ~ .modal-content .main-image img {
+    content: url('z6065221898282_b35ab1c220bf60193ab9755d45eb63bc.jpg');
+}
+
+input#product3-thumb1:checked ~ .modal-content .main-image img,
+input#product3-thumb2:checked ~ .modal-content .main-image img,
+input#product3-thumb3:checked ~ .modal-content .main-image img,
+input#product3-thumb4:checked ~ .modal-content .main-image img {
+    content: url('z6065221985034_dcb8d355e39538afbd3cfc2410781a37.jpg');
+}
+
+input#product4-thumb1:checked ~ .modal-content .main-image img,
+input#product4-thumb2:checked ~ .modal-content .main-image img,
+input#product4-thumb3:checked ~ .modal-content .main-image img,
+input#product4-thumb4:checked ~ .modal-content .main-image img {
+    content: url('z6065221995894_4ea01e2e4bb582f92fe9511dabb3a7a9.jpg');
+}
+
+  /* Instagram Order Button */
+  .instagram-btn {
+    background-color: #E4405F;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.instagram-btn img {
+    width: 24px;
+    height: auto;
+}
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .modal-images {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller columns for smaller screens */
+    }
+  }
 
 /* Tooltip styles */
 .tooltip {
@@ -367,20 +523,21 @@ nav ul li a:hover {
 
 .tooltip .tooltip-text {
     visibility: hidden;
-    width: 200px;
-    background-color: black;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     text-align: center;
-    border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px;
+    border-radius: 8px;
     position: absolute;
     z-index: 1;
     bottom: 125%;
     left: 50%;
-    margin-left: -100px;
+    transform: translateX(-50%);
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: all 0.3s ease;
 }
+
 
 .tooltip:hover .tooltip-text {
     visibility: visible;
@@ -396,5 +553,36 @@ nav ul li a:hover {
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+.order-instagram {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .order-instagram a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #833AB4; /* Instagram gradient color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .order-instagram i {
+    font-size: 1.5rem;
+    color: #E1306C; /* Instagram icon color */
+    margin-right: 8px;
+  }
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .logo {
+        font-size: 30px;
+    }
+    .product-card h1 {
+        font-size: 16px;
     }
 }
