@@ -20,7 +20,7 @@ body {
     background: linear-gradient(120deg, #2980b9, #8e44ad, #f39c12);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
-    
+
     
 @keyframes gradientAnimation {
         0% { background-position: 0% 50%; }
@@ -370,7 +370,7 @@ nav ul li a:hover {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 1.5rem;
+    font-size: 100px;
     color: #333;
     cursor: pointer;
     background: transparent;
